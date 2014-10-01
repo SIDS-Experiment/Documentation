@@ -20,15 +20,6 @@ Instruction during experiment
 
 ## Important directories
 
-```bash
-/hera/sids/GO2014/							# 2014 data
-/hera/sids/GO2014/RSA30						# Raw data of RSA30
-/hera/sids/GO2014/RSA51						# Raw data of RSA51
-/hera/sids/GO2014/RSA52						# Raw data of RSA52
-/hera/sids/GO2014/Oscil						# Raw inj/extr kicker data
-/hera/sids/GO2014/AnalysisResults/visual	# or $ESRDATAPATHOUT -> decay time data (output of manual/visual analysis)
-```
-
 Data is being acquired using 3 spectrum analyzers and 1 oscilloscope. The
 spectrum analyzers each save 1 data file during each injection. The
 oscilloscope has 4 channels, and saves them 2 times during each injection: at
@@ -45,16 +36,22 @@ subdirectories. Merged files from the different folders will be placed in the
 `ROOT` folder. The directory structure can be seen here.
 
 ```
-.
-├── Oscil
-│   ├── C1
-│   ├── C2
-│   ├── C3
-│   └── C4
-├── ROOT
-├── RSA30
-├── RSA51
-└── RSA52
+/hera/sids/GO2014                           # 2014 data
+├── AnalysisResults                         #
+│   ├── automatic                           # Output of automatic analysis
+│   │   └── figs                            #
+│   └── visual                              # Output of visual analysis
+│       └── SidsVisualDecayResults.root     #
+├── Oscil                                   # Raw data of oscilloscope
+│   ├── C1                                  #   first kicker module
+│   ├── C2                                  #   second kicker module
+│   ├── C3                                  #   third kicker module
+│   └── C4                                  #   trigger signal
+├── ROOT                                    # Merged data from instruments
+├── RSA30                                   # Raw data of RSA30
+├── RSA51                                   # Raw data of RSA51
+└── RSA52                                   # Raw data of RSA52
+
 ```
 
 ## Autocopy
