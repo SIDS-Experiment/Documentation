@@ -16,12 +16,12 @@ Instruction during experiment
 ## Important directories
 
 ```bash
-/hera/sids/GO2014/						# 2014 data
-/hera/sids/GO2014/RSA30				# Raw data of RSA30
-/hera/sids/GO2014/RSA51				# Raw data of RSA51
-/hera/sids/GO2014/RSA52				# Raw data of RSA52
-/hera/sids/GO2014/Oscil					# Raw inj/extr kicker data
-/hera/sids/GO2014/ROOT					# or $ESRDATAPATHIN -> Preprocessed data (containing all information needed for manual or automatic analysis) 
+/hera/sids/GO2014/							# 2014 data
+/hera/sids/GO2014/RSA30						# Raw data of RSA30
+/hera/sids/GO2014/RSA51						# Raw data of RSA51
+/hera/sids/GO2014/RSA52						# Raw data of RSA52
+/hera/sids/GO2014/Oscil						# Raw inj/extr kicker data
+/hera/sids/GO2014/ROOT						# or $ESRDATAPATHIN -> Preprocessed data (containing all information needed for manual or automatic analysis) 
 /hera/sids/GO2014/AnalysisResults/visual		# or $ESRDATAPATHOUT -> decay time data (output of manual/visual analysis)
 ```
 
