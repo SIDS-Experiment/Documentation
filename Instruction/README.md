@@ -49,10 +49,10 @@ The second terminal (terminal_2) is used to display the available files to
 analyse.
 
   ```bash
-terminal_2> cd $ESRDATAPATH
+terminal_2> cd $ESRDATAPATHIN
   ```
   
-$ESRDATAPATH points to the directory with the root files to analyze. These input root files are the output of the time2root, and contain the time-resolved multitaper spectra from the different instruments with the corresponding header information and the injection/extraction kicker signals.
+$ESRDATAPATHIN points to the directory with the root files to analyze. These input root files are the output of the time2root, and contain the time-resolved multitaper spectra from the different instruments with the corresponding header information and the injection/extraction kicker signals.
 You can display the available files using the command 'ls -al' in terminal_2.
 
 
@@ -68,7 +68,7 @@ terminal_2 using the command 'ls -al')
  
  The output file of the manual analysis is stored on hera :
   ```bash
-  /hera/sids/AnalysisResults/visual/SidsVisualDecayResults.root
+  $ESRDATAPATHOUT/SidsVisualDecayResults.root
   ```
  In case some parameters of the manual analysis script need to be adjusted, the script is found in 
     ```bash
