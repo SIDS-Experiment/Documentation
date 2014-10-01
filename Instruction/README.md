@@ -22,7 +22,7 @@ Instruction during experiment
 /hera/sids/GO2014/RSA52						# Raw data of RSA52
 /hera/sids/GO2014/Oscil						# Raw inj/extr kicker data
 /hera/sids/GO2014/ROOT						# or $ESRDATAPATHIN -> Preprocessed data (containing all information needed for manual or automatic analysis) 
-/hera/sids/GO2014/AnalysisResults/visual		# or $ESRDATAPATHOUT -> decay time data (output of manual/visual analysis)
+/hera/sids/GO2014/AnalysisResults/visual	# or $ESRDATAPATHOUT -> decay time data (output of manual/visual analysis)
 ```
 
 
