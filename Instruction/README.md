@@ -23,7 +23,7 @@ To document your work use the elog. Start elog in an internet browser. The url o
   ```bash
 http://lxg0187:8080
   ```
-
+username and password are available on the first page of the logbook.
 There are 3 logbooks available:
 * GO2014 automatic analysis
 * GO2014 visual analysis
