@@ -2,15 +2,11 @@ Instruction during experiment
 ========
 
 - [Data flow and storage](#user-content-data-flow-and-storage)
-
 - [Spectrum analyzer](#user-content-spectrum-analyzer)
-
 - [Electronic logbook](#user-content-electronic-logbook)
-
 - [Manual analysis](#user-content-manual-analysis)
 	- [Analysis computer](#user-content-analysis-computer)
 	- [Using the GUI](#user-content-using-the-gui)
-
 - [Automatic analysis](#user-content-automatic-analysis)
 
 
@@ -74,9 +70,7 @@ terminal_2 using the command 'ls -al')
   ```bash
   /hera/sids/AnalysisResults/visual/SidsVisualDecayResults.root
   ```
-  
-  ### 
-  In case some parameters of the manual analysis script need to be adjusted, the script is found in 
+ In case some parameters of the manual analysis script need to be adjusted, the script is found in 
     ```bash
   /data.local2/software/SIDSRoot/build/bin/startVisualAnalysis.sh
     ```
