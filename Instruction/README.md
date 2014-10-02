@@ -110,6 +110,8 @@ UserName is a string to identify the person doing the analysis.
 InputFileName is the name of the file to analyse (the files can be listed in
 terminal_2 using the command 'ls -al')
 
+![example](figures/guiDoc1.png?raw=true "Example")
+
  The output file of the manual analysis is stored on hera :
   ```bash
   $ESRDATAPATHOUT/SidsVisualDecayResults.root
