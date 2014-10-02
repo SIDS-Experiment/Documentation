@@ -78,6 +78,8 @@ InputFileName is the name of the file to analyse (the files can be listed in
 terminal_2 using the command 'ls -al')
 
  
+ 
+ 
  The output file of the manual analysis is stored on hera :
   ```bash
   $ESRDATAPATHOUT/SidsVisualDecayResults.root
