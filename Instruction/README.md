@@ -25,7 +25,7 @@ spectrum analyzers each save 1 data file during each injection. The
 oscilloscope has 4 channels, and saves them 2 times during each injection: at
 the time of injection and at the time of extraction. As a result we have 11
 files per injection. The data is transferred to our analysis PCs automatically
-using [autocopy](#autocopy) where it is automatically merged using the
+using [autocopy](#autocopy), from there it is automatically merged using the
 [merger](#merger).
 
 ## Directory structure
@@ -33,7 +33,7 @@ using [autocopy](#autocopy) where it is automatically merged using the
 The data is copied to the directory `/hera/sids/GO2014`. Each instrument has
 it's own directory, and oscilloscope channels also have separate
 subdirectories. Merged files from the different folders will be placed in the
-`ROOT` folder. The directory structure can be seen here.
+`ROOT` folder. The directory structure can be seen below:
 
 ```
 /hera/sids/GO2014                           # 2014 data
@@ -85,6 +85,19 @@ You'll find this in the right upper corner of the NTCAP-DAQ-Program.
 
 # Spectrum analyzer
 
+Steps to getting the S/As running:
+
+## RSA51/RSA52
+
+1. Launch the spectrum analyzer application.
+2. Load the last acquired file from `C:\\oscillation\`.
+3. Press the `Acquire` button and check the `Sampling parameters` tab to see if
+   the proper acq. bandwidth and acquisition length are set (19.5/39.1kHz and 
+   70s).
+4. Press the `Trigger` button and check that on the left side `Triggered` is
+   selected and that `Save acquisition on trigger` is selected in the `Action`
+   tab.
+5. Move the mouse to the bottom of the screen
 
 # Electron cooler
 
