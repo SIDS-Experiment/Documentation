@@ -21,7 +21,7 @@ Instruction during experiment
 ## Important directories
 
 Data is being acquired using 3 spectrum analyzers and 1 oscilloscope. The
-spectrum analyzers each save 1 data file during each injection. The
+spectrum analyzers each save 1 data file per injection. The
 oscilloscope has 4 channels, and saves them 2 times during each injection: at
 the time of injection and at the time of extraction. As a result we have 11
 files per injection. The data is transferred to our analysis PCs automatically
@@ -30,10 +30,10 @@ using [autocopy](#autocopy), from there it is automatically merged using the
 
 ## Directory structure
 
-The data is copied to the directory `/hera/sids/GO2014`. Each instrument has
-it's own directory, and oscilloscope channels also have separate
-subdirectories. Merged files from the different folders will be placed in the
-`ROOT` folder. The directory structure can be seen below:
+The data is copied to the directory `/hera/sids/GO2014` (if this path is not present check 
+`/SAT/hera/sids/GO2014`). Each instrument has it's own directory, and oscilloscope channels 
+also have separate subdirectories. Merged files from the different folders will be placed in 
+the `ROOT` folder. The directory structure can be seen below:
 
 ```
 /hera/sids/GO2014                           # 2014 data
@@ -55,6 +55,18 @@ subdirectories. Merged files from the different folders will be placed in the
 ```
 
 ## Autocopy
+
+1. For the RSA50s open `C:\\autocopy`, for RSA30 open `C:\\Oscillation\Autocopy`, for the oscilloscope open `D:\\autocopy\py`.
+2. Double click on `key-apdev26.ppk`.
+3. Check the system tray to see if `pagent`is running, click it and check if the key has been   added.
+4. Double click on `autocopy.py` to start the script.
+5. If asked about which filelist to choose, in doubt select local (l).
+6. If the program window says "Got list of processed files." the application has started. Let   it run.
+7. If the application needs to catch up with the transferring, it will take a long time 
+   before you see the next message saying `PING`. Wait and observe the log.
+8. To view the log right click on `autocopy.log` and open it with Notepad++.
+
+The latest entry will always be on the bottom, to reload the log press `File -> Reload from disk`.
 
 ## Merger
 
