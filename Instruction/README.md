@@ -74,7 +74,8 @@ Tools → Align → Align Now and wait until the devices have finished.
 ##### 4. At NTCAP-DAQ station: 
 Press Stop-Button.
 ##### 5. At NTCAP-DAQ station: 
-Wait until program is again in Init'd state . 6. At NTCAP-DAQ station: Press Start Button at NTCA-DAQ.
+Wait until program is again in Init'd state . 
+##### 6. At NTCAP-DAQ station: Press Start Button at NTCA-DAQ.
 ##### 7. Start ESR cycle.
 ##### 8. Please make a note in our NTCAP - logbook with time/ action /directory path.
 ##### 9. Thank you very much!
