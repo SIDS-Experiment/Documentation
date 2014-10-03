@@ -6,6 +6,7 @@ Instruction during experiment
     - [Autocopy](#autocopy)
     - [Merger](#merger)
 - [NTCAP-DAQ station](#user-content-ntcap-daq-station)
+- [RSA51 Crash recovery](#rsa51-recovery)
 - [Spectrum analyzer](#user-content-spectrum-analyzer)
 - [Electron cooler](#user-content-electron-cooler)
 - [Electronic logbook](#user-content-electronic-logbook)
@@ -97,6 +98,73 @@ Here is a screenshot from the controls of NTCAP-DAQ station.
 You'll find this in the right upper corner of the NTCAP-DAQ-Program. 
 
 ![NTCAP](figures/NTCAP.png?raw=true "NTCAP")
+
+
+# RSA51 Crash recovery
+
+The firmware was updated to newest version from Tektronix, same version number as the RSA52. The crash should not happen again, but in case it does, follow the instructions below:
+
+* press long to turn off 
+* press to turn on again
+* wait until boot is complete
+* press "recall" by choosing FILE ⟶ Open
+* then choose the last good TIQ file "ACQ Data with Setup"
+* click open
+* close Data and Setup
+
+### Individual Settings:
+
+#### settings control panel:
+
+* on the Freq and Span tab:
+	* span 20 kHz
+* on the amplitude scale tab:
+	* color power: min -90 dBm and max -71 dBm
+* on time and frequency scale:
+	* Time per div: 20 seconds
+
+#### trigger control panel:
+* on the event tab:
+	* triggered
+	* trig in front
+* on the Advanced tab:
+	* position 1%
+* on the actions tab:
+	* save acq data
+	* max total files should be off
+
+#### on the acquisition control panel:
+
+* on the sampling parameters tab:
+	* Adjust is: ACQ BW, ACQ Length combo box
+	* ACQ BW : 19.53 kHz
+	* ACQ Length: 70 s
+
+#### Analysis control panel:
+* Analysis time tab:
+	* time zero reference should be trigger
+	* Analysis length same as above = 70 s
+
+#### Setup --> Configure I/O
+* Trig 1 should be 50 Ohm
+ 
+#### File --> Acquisition Save Options
+* All files section:
+	* Check automatically increment file name
+* Acquisition data files:
+	* Entire IQ record
+
+#### Tools --> Alignment
+* choose run alignment only when the align now is pressed
+then press align now once and wait until finished
+
+### Starting the procedure
+ 
+* Save a dummy TIQ file with the name of RSA1.tiq in the directory
+* c:/oscillation/
+* this dummy file should be deleted afterwards.
+ * press run/stop button
+
 
 
 
