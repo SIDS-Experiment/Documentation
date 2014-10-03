@@ -82,6 +82,7 @@ The latest entry will always be on the bottom, to reload the log press `File -> 
 # NTCAP-DAQ station
 To ensure a good synchronization at NTCAP-DAQ station please restart the NTCAP acquisition ~3h. Here is a list to do this properly.
 Please mind the following steps in the correct order!
+
 1. Stop ESR cycle.
 2. Wait until ESR cycle ends.
 3. To align both RSA51 and RSA52 devices at ESR station select from their menu: 
@@ -94,6 +95,7 @@ Wait until program is again in Init'd state .
 7. Start ESR cycle.
 8. Please make a note in our NTCAP - logbook with time/ action /directory path.
 9. Thank you very much!
+
 Here is a screenshot from the controls of NTCAP-DAQ station. 
 You'll find this in the right upper corner of the NTCAP-DAQ-Program. 
 
