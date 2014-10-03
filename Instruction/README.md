@@ -60,7 +60,7 @@ the `ROOT` folder. The directory structure can be seen below:
 2. Double click on `key-apdev26.ppk`.
 3. Check the system tray to see if `pagent`is running, click it and check if the key has been   added.
 4. Double click on `autocopy.py` to start the script.
-5. If asked about which filelist to choose, in doubt select local (l).
+5. If asked about which file list to choose, unless you have a good reason not to, select local (l).
 6. If the program window says "Got list of processed files." the application has started. Let   it run.
 7. If the application needs to catch up with the transferring, it will take a long time 
    before you see the next message saying `PING`. Wait and observe the log.
@@ -70,8 +70,13 @@ The latest entry will always be on the bottom, to reload the log press `File -> 
 
 ## Merger
 
-
-
+1. Open a terminal and cd into `/hera/sids/GO2014/Merger`.
+2. More than one terminal will be needed (for monitoring) so press Ctrl-Shift-N 2 times.
+3. On one of the terminals start the merger program by typing `python merger.py`.
+4. On one of the other terminals run the command `watch -n 0.5 merging.log` to monitor the 
+   log. Newest entries will be on top.
+5. Run `tail -n 40 -F contents.list` to keep track of what is placed in the merged ROOT file.
+   Newest entries will be on the bottom.
 
 # NTCAP-DAQ station
 To ensure a good synchronization at NTCAP-DAQ station please restart the NTCAP acquisition ~3h. Here is a list to do this properly.
