@@ -242,6 +242,19 @@ terminal_2 using the command 'ls -al')
 
 ![example](figures/guiDoc1.png?raw=true "Example")
 
+
+#### Showfiles script
+The showfiles.sh script displays the files that have been analyzed or that have not been analyzed yet.
+The Commands are the following:  
+```bash
+    showfiles.sh all        # show all files
+    showfiles.sh done       # show already analyzed files
+    showfiles.sh done detail    # show the number of times the files have been analyzed as well
+    showfiles.sh left       # show the files not yet analyzed
+  ```
+
+#### startVisualAnalysis.sh parameters
+
  The output file of the manual analysis is stored on hera :
   ```bash
   $ESRDATAPATHOUT/SidsVisualDecayResults.root
@@ -261,6 +274,8 @@ terminal_2 using the command 'ls -al')
     binSigmaPeak="4.0"         # sigma (in bin) of peaks
     thresholdPeak="0.2"         # threshold for peak detection
     detectorID="RSA51"         # "RSA51", "RSA52", or "RSA30"
+    zmax="3.5e-8"               # set maximum z axis of 2D histogram
+    ZSliderScale="5.e-9"        # Scale of the slider position
   ```
 
 The rest of the parameters should not be changed.
