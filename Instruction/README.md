@@ -20,49 +20,63 @@ Instruction during experiment
 
 ## Important directories
 
-```bash
-/hera/sids/GO2014/							# 2014 data
-/hera/sids/GO2014/RSA30						# Raw data of RSA30
-/hera/sids/GO2014/RSA51						# Raw data of RSA51
-/hera/sids/GO2014/RSA52						# Raw data of RSA52
-/hera/sids/GO2014/Oscil						# Raw inj/extr kicker data
-/hera/sids/GO2014/AnalysisResults/visual	# or $ESRDATAPATHOUT -> decay time data (output of manual/visual analysis)
-```
-
 Data is being acquired using 3 spectrum analyzers and 1 oscilloscope. The
-spectrum analyzers each save 1 data file during each injection. The
+spectrum analyzers each save 1 data file per injection. The
 oscilloscope has 4 channels, and saves them 2 times during each injection: at
 the time of injection and at the time of extraction. As a result we have 11
 files per injection. The data is transferred to our analysis PCs automatically
-using [autocopy](#autocopy) where it is automatically merged using the
+using [autocopy](#autocopy), from there it is automatically merged using the
 [merger](#merger).
 
 ## Directory structure
 
-The data is copied to the directory `/hera/sids/GO2014`. Each instrument has
-it's own directory, and oscilloscope channels also have separate
-subdirectories. Merged files from the different folders will be placed in the
-`ROOT` folder. The directory structure can be seen here.
+The data is copied to the directory `/hera/sids/GO2014` (if this path is not present check 
+`/SAT/hera/sids/GO2014`). Each instrument has it's own directory, and oscilloscope channels 
+also have separate subdirectories. Merged files from the different folders will be placed in 
+the `ROOT` folder. The directory structure can be seen below:
 
 ```
-.
-├── Oscil
-│   ├── C1
-│   ├── C2
-│   ├── C3
-│   └── C4
-├── ROOT
-├── RSA30
-├── RSA51
-└── RSA52
+/hera/sids/GO2014                           # 2014 data
+├── AnalysisResults                         #
+│   ├── automatic                           # Output of automatic analysis
+│   │   └── figs                            #
+│   └── visual                              # Output of visual analysis
+│       └── SidsVisualDecayResults.root     #
+├── Oscil                                   # Raw data of oscilloscope
+│   ├── C1                                  #   first kicker module
+│   ├── C2                                  #   second kicker module
+│   ├── C3                                  #   third kicker module
+│   └── C4                                  #   trigger signal
+├── ROOT                                    # Merged data from instruments
+├── RSA30                                   # Raw data of RSA30
+├── RSA51                                   # Raw data of RSA51
+└── RSA52                                   # Raw data of RSA52
+
 ```
 
 ## Autocopy
 
+1. For the RSA50s open `C:\\autocopy`, for RSA30 open `C:\\Oscillation\Autocopy`, for the oscilloscope open `D:\\autocopy\py`.
+2. Double click on `key-apdev26.ppk`.
+3. Check the system tray to see if `pagent`is running, click it and check if the key has been   added.
+4. Double click on `autocopy.py` to start the script.
+5. If asked about which file list to choose, unless you have a good reason not to, select local (l).
+6. If the program window says "Got list of processed files." the application has started. Let   it run.
+7. If the application needs to catch up with the transferring, it will take a long time 
+   before you see the next message saying `PING`. Wait and observe the log.
+8. To view the log right click on `autocopy.log` and open it with Notepad++.
+
+The latest entry will always be on the bottom, to reload the log press `File -> Reload from disk`.
+
 ## Merger
 
-
-
+1. Open a terminal and cd into `/hera/sids/GO2014/Merger`.
+2. More than one terminal will be needed (for monitoring) so press Ctrl-Shift-N 2 times.
+3. On one of the terminals start the merger program by typing `python merger.py`.
+4. On one of the other terminals run the command `watch -n 0.5 merging.log` to monitor the 
+   log. Newest entries will be on top.
+5. Run `tail -n 40 -F contents.list` to keep track of what is placed in the merged ROOT file.
+   Newest entries will be on the bottom.
 
 # NTCAP-DAQ station
 To ensure a good synchronization at NTCAP-DAQ station please restart the NTCAP acquisition ~3h. Here is a list to do this properly.
@@ -89,6 +103,19 @@ You'll find this in the right upper corner of the NTCAP-DAQ-Program.
 
 # Spectrum analyzer
 
+Steps to getting the S/As running:
+
+## RSA51/RSA52
+
+1. Launch the spectrum analyzer application.
+2. Load the last acquired file from `C:\\oscillation\`.
+3. Press the `Acquire` button and check the `Sampling parameters` tab to see if
+   the proper acq. bandwidth and acquisition length are set (19.5/39.1kHz and 
+   70s).
+4. Press the `Trigger` button and check that on the left side `Triggered` is
+   selected and that `Save acquisition on trigger` is selected in the `Action`
+   tab.
+5. Move the mouse to the bottom of the screen
 
 # Electron cooler
 
