@@ -60,7 +60,38 @@ subdirectories. Merged files from the different folders will be placed in the
 ## Merger
 
 
+
+
+# NTCAP-DAQ station
+To ensure a good synchronization at NTCAP-DAQ station please restart the NTCAP acquisition ~3h. Here is a list to do this properly.
+Please mind the following steps in the correct order!
+##### 1. Stop ESR cycle.
+##### 2. Wait until ESR cycle ends.
+##### 3. To align both RSA51 and RSA52 devices at ESR station select from their menu: 
+Tools → Align → Align Now and wait until the devices have finished.
+##### 4. At NTCAP-DAQ station: 
+Press Stop-Button.
+##### 5. At NTCAP-DAQ station: 
+Wait until program is again in Init'd state . 6. At NTCAP-DAQ station: Press Start Button at NTCA-DAQ.
+##### 7. Start ESR cycle.
+##### 8. Please make a note in our NTCAP - logbook with time/ action /directory path.
+##### 9. Thank you very much!
+Here is a screenshot from the controls of NTCAP-DAQ station. 
+You'll find this in the right upper corner of the NTCAP-DAQ-Program. 
+
+![NTCAP](figures/NTCAP.png?raw=true "NTCAP")
+
+
+
+
 # Spectrum analyzer
+
+
+# Electron cooler
+
+### Check the electron cooler screen
+
+![ECooler](figures/ecoolscreen.png?raw=true "ECooler")
 
 
 # Electronic logbook
@@ -81,13 +112,13 @@ interest for the experiment.
 
 # Manual analysis
 
-## Analysis computer
+### Analysis computer
 
-### Login into lxg0188
+#### Login into lxg0188
 The manual analysis is performed on the lxg0188 computer.
 username and password are available on the first page of the logbook.
 
-### Open 2 terminals
+#### Open 2 terminals
 
 One terminal (terminal_1) is used to start the analysis program.
 The second terminal (terminal_2) is used to display the available files to
@@ -120,7 +151,7 @@ terminal_2 using the command 'ls -al')
     ```bash
   /data.local2/software/SIDSRoot/build/bin/startVisualAnalysis.sh
     ```
-  Parameter of interest that might need to change are:
+  Parameter of interest that might need to be changed are:
 
   ```bash
     binDistancePDfreq="52"    # distance in bin between parent and daughter freq
