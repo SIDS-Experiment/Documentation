@@ -104,6 +104,8 @@ You'll find this in the right upper corner of the NTCAP-DAQ-Program.
 
 # RSA51 crash recovery
 
+**Don't Panic!**
+
 The firmware was updated to the newest version from Tektronix, same version number as the RSA52. The crash should not happen again, but in case it does, follow the instructions below:
 
 * press long to turn off 
@@ -173,17 +175,18 @@ then press align now once and wait until finished
 
 Steps to getting the S/As running:
 
-## RSA51/RSA52
+## RSA50s
 
-1. Launch the spectrum analyzer application.
-2. Load the last acquired file from `C:\\oscillation\`.
-3. Press the `Acquire` button and check the `Sampling parameters` tab to see if
-   the proper acq. bandwidth and acquisition length are set (19.5/39.1kHz and 
-   70s).
-4. Press the `Trigger` button and check that on the left side `Triggered` is
+1. Launch the spectrum analyzer application
+2. Align the instrument by `Tools -> Alignments -> Align Now`
+3. Load the last acquired file from `C:\\oscillation\`
+4. Press the `Acquire` button and check the `Sampling parameters` tab to see if
+   the proper acq. bandwidth (19.5/39.1 kHz for RSA51/RSA52) and acquisition length
+   (70 s) are set
+5. Press the `Trigger` button and check that on the left side `Triggered` is
    selected and that `Save acquisition on trigger` is selected in the `Action`
-   tab.
-5. Move the mouse to the bottom of the screen
+   tab
+6. Press the `Run/Stop` button to start acquiring data
 
 # Electron cooler
 Check the electron cooler screen
